@@ -1,0 +1,24 @@
+CACHE MANIFEST
+
+styles.css
+index.html
+app/app.component.html
+app/app.component.js
+app/main.js
+app/news.service.js
+node_modules/es6-shim/es6-shim.min.js
+node_modules/systemjs/dist/system-polyfills.js
+node_modules/angular2/es6/dev/src/testing/shims_for_IE.js
+node_modules/angular2/bundles/angular2-polyfills.js
+node_modules/systemjs/dist/system.src.js
+node_modules/rxjs/bundles/Rx.js
+node_modules/rxjs/add/operator/map.js 
+node_modules/rxjs/Observable.js 
+node_modules/rxjs/Subject.js 
+node_modules/rxjs/observable/PromiseObservable.js
+node_modules/rxjs/operator/toPromise.js
+node_modules/angular2/bundles/angular2.dev.js
+node_modules/angular2/bundles/http.js
+node_modules/a2-in-memory-web-api/web-api.js
+node_modules/bootstrap/dist/css/bootstrap.min.css
+http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900italic,700italic,900

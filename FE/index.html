@@ -1,10 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>News Store</title>
-</head>
-<body>
-  <h1>hello world</h1>
-</body>
+<html manifest="./cache.manifest" type="text/cache-manifest">
+  <head>
+    <title>News Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <base href="/">   
+    <link rel="stylesheet" href="./styles.css">
+    <link href='fonts.googleapis.com/css?family=Source+Sans+Pro:400,900italic,700italic,900' rel='stylesheet' type='text/css'>
+    <!-- 1. Load libraries -->
+    <!-- IE required polyfills, in this exact order -->
+    <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+    <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
+    <script src="node_modules/angular2/es6/dev/src/testing/shims_for_IE.js"></script>   
+    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="node_modules/rxjs/bundles/Rx.js"></script>
+    <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+    <script src="node_modules/angular2/bundles/http.js"></script>
+    <script src="node_modules/angular2/bundles/router.dev.js"></script>
+    <script src="node_modules/a2-in-memory-web-api/web-api.js"></script>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- 2. Configure SystemJS -->
+    <script>
+      System.config({
+        map: {
+            rxjs: 'node_modules/rxjs' 
+        },
+        packages: { 
+          app: {
+            format: 'register',
+            defaultExtension: 'js'
+          },       
+          'js': {
+            format: 'cjs',
+            defaultExtension: 'js'
+          },
+          rxjs: {
+            defaultExtension: 'js'
+          }
+        }
+      });
+      System.import('app/main')
+            .then(null, console.error.bind(console));
+    </script>
+  </head>
+  <!-- 3. Display the application -->
+  <body>
+    <app-component>Loading...</app-component>
+  </body>
 </html>
